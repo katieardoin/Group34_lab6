@@ -15,8 +15,13 @@ def encode():
     return encoded
     print('Your password has been encoded and stored!')
 
-def decode(password): #Add Decoder here
-    return None
+def decode(password): #Will Engleby
+    result = ''
+    for digit in password:
+        new_digit = str((int(digit) - 3) % 10)
+        result += new_digit
+    return result
+    
 
 if __name__ == '__main__':
     while True:
